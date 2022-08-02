@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>리스트메뉴(수평 리스트)</title>
+        <!--html만 가지고는 수직만 되지만 CSS를 사용하면 수평도 가능
+        메뉴바 같은 것 만드는데 사용할 수 있음-->
+        <!--스타일시트는 헤드에 작성-->
+        <style>
+            li {
+                list-style-type: none;
+                float: left; 
+                padding: 20px;
+                background-color: black;
+                color:white;
+            }
+            li:hover{
+                background-color: darkgrey;
+            }
+        </style>
+        <!--float:left 는 뜯어서 왼쪽에 붙이는것
+            패딩은 주변 여백-->
+    </head>
+    <body>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Javascript</li>
+            <li>JQury</li>
+        </ul>
+    </body>
+</html>
