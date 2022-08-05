@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>clone_naver_join</title>
+</head>
+<body>
+    <div style="width: 400px; margin:auto">
+    <h2>회원가입</h2>
+    <hr>
+    <form>
+        <div>
+        아이디<br>
+        <input style="width:100%" type="text" name="userid" required placeholder="아이디를 입력하세요">
+    </div>
+    <div>
+        비밀번호<br>
+        <input style="width:100%" type="password" name="userpwd" required placeholder="비밀번호를 입력하세요">
+    </div>
+    <div>
+        비밀번호 재확인<br>
+        <input style="width:100%" type="password" name="userpwd_ck" required placeholder="동일한 비밀번호를 입력하세요">
+    </div>
+    <div>
+        이름<br>
+        <input style="width:100%" type="text" name="user_name" required>
+    </div>
+    <div>
+        생년월일<br>
+        <input type="text" name="user_byear" required 
+        maxlength="4" placeholder="년 yyyy">
+        <select name="user_bmon">
+            <option>월</option>
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <input type="text" name="user_bday" required 
+        maxlength="2" placeholder="일dd">
+    </div>
+    <div>
+        성별<br>
+        <select name="user_gender">
+            <option>성별</option>
+            <option value="M">남성</option>
+            <option value="F">여성</option>
+            <option value="U">선택 안함</option>
+        </select>
+    </div>
+    <div>
+        본인확인이메일<small style="color: gray;">선택</small><br>
+        <input type="email" name="user_email">
+    </div>
+    <div>
+        휴대전화<br>
+        <select name="tel">
+            <option value="233">가나 +233</option>
+            <option value="82" selected>대한민국 +82</option>
+        </select><br>
+        <input type="tel" name="user_tel" placeholder="전화번호 입력">
+        <input type="button" name="auth_trans" value="인증번호 전송"><br>
+        <input type="text" name="authNo" placeholder="인증번호 입력" disabled>
+    </div>
+    <div>
+        <input type="button" value="가입하기">
+    </div>
+    </form>
+</div>
+</body>
+</html>
