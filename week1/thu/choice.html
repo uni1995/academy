@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>단일 선택과 다중 선택</title>
+</head>
+<body>
+    <h2>단일 선택</h2>
+    <form>
+        <h3>당신의 성별은?</h3>
+        <input id="man" type="radio" name="gender" value="M">
+        <label for="man">남성</label><br>
+        <input id="woman" type="radio" name="gender" value="F">
+        <label for="woman">여성</label><br>
+        <input type="submit" value="전송">
+    </form>
+    <hr>
+    <form>
+        <fieldset name="ffood">
+            <legend>지금 먹고 싶은 음식은?</legend>
+            <input type="radio" name="food" value="tang">탕수육<br>
+            <input type="radio" name="food" value="gal">갈비탕<br>
+            <input type="radio" name="food" value="don">돈까스<br>
+            <!--fieldset 은 테두리 그려줌 제목은 <legend> 태그 사용
+                radio가 묶이는 것은 name이 같아서 묶이는 것임-->
+        </fieldset>
+    </form>
+    <hr>
+    <h2>다중 선택</h2>
+    <form>
+        <fieldset name="animal">
+            <legend>좋아하는 동물</legend>
+            <input type="checkbox" name="pet" value="dog">강아지<br>
+            <input type="checkbox" name="pet" value="cat">고양이<br>
+            <input type="checkbox" name="pet" value="sudal">수달<br>
+            <input type="checkbox" name="pet" value="paret">패럿<br>
+            <input type="submit" value="전송">
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>선택한 목록입니다</legend>
+            
+        </fieldset>
+    </form>
+</body>
+</html>

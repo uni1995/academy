@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>선택 목록</title>
+</head>
+<body>
+    <h2>휴대전화 번호 입력</h2>
+    <form>
+        <select name="nums">
+            <option value="sk">sk</option>
+            <option value="kt" selected>kt</option>
+            <option value="lg">lg</option>
+        </select>        
+        <!--select 자체가 그룹핑되는 목록임
+        selected 는 디폴트로 처음에 선택되는 값-->
+    </form>
+    <hr>
+    <h2>자동차브랜드</h2>
+    <form>
+        <select name="cars" multiple size="3">
+            <option value="hy">현대</option>
+            <option value="kia">기아</option>
+            <option value="bmw">BMW</option>
+            <option value="be">Benz</option>
+            <option value="sm">SM</option>
+        </select>
+    </form>
+    <hr>
+    <h2>datalist</h2>
+    <form>
+        <input list="brs" name="brws">
+        <datalist id="brs">
+            <option value="edge">엣지</option>
+            <option value="chrome">크롬</option>
+            <option value="safari">사파리</option>
+            <option value="opera">오페라</option>
+        </datalist>
+    </form>
+    <hr>
+    <h2>Label</h2>
+    <form>
+        <label></label>
+        <!--글자를 선택해도 선택한 것으로 할수있다
+        (radio 등... ->> choice)-->
+    </form>
+</body>
+</html>

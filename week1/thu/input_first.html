@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>입력 양식</title>
+</head>
+<script>
+    function check(){
+        var form = document.loginform;
+        if(form.id.value=="")
+        {
+            alert('아이디를 입력해주세요');
+            form.id.focus();
+            return;
+        }
+        else if(form.pwd.value==""){
+            alert('비밀번호를 입력해주세요');
+            form.pwd.focus();
+            return;
+        }
+        else if(form.uname.value==""){
+            alert('이름을 입력해주세요');
+            form.uname.focus();
+            return;
+        }
+        else{
+            alert('로그인이 완료되었습니다');
+            form.submit();
+        }
+    }
+    function move_join(){
+        location.href ="../wed/User_join_ex.html";
+    }
+</script>
+<body>
+    <h1>로그인</h1>
+    <form name="loginform">
+        ID : <input type="text" name="id" value=""><br>
+        <!--value=""는 비어있는것 value=" "는 공백문자가 들어있는것-->
+        PASSWORD : <input type="password" name="pwd" value=""><br>
+        <input type="hidden" name="hd" value="숨긴데이터">
+        <input type="button" value="버튼1" onclick="alert('버튼')">
+        <!--html과 js는 ""와 ''를 구분하지 않지만 우리가 구분하기 위해 사용
+        "ㄴㅇㄹ'ㄴㅇㄹ'" //  'ㅎㅎ"ㅎㅎ"'-->
+        <button type="button" onclick="alert('버튼2눌림')">버튼2</button>
+        <!--폼안에 버튼태그를 사용하면 submit이랑 같은 역할을 함
+        하지만 버튼태그에 타입버튼을 주면 전송하지 않음-->
+        <input type="submit" value="전송"><br>
+        <input type="button" value="로그인" onclick="check()">
+        <input type="button" value="회원가입" onclick="move_join()">
+        <br>
+        <!--정렬은 테이블이나 CSS로 사용-->
+        <input type="reset" value="초기화"><br>
+        <!--reset은 지우는 게 아니다 원래 들어가있는 value로 바꾸는것-->
+    </form>
+</body>
+</html>

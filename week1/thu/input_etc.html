@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>다양한 입력 양식</title>
+</head>
+<body>
+    <form>
+        <h3>입력 양식</h3>
+        <p><input type="color" name="color"></p>
+        <!--전송은 %23ffc7c7 // %23은 컬러라는 표시#-->
+        <p><input type="number" name="num" min="0" max="10"></p>
+        <p><input type="range" name="ran" min="-50" max="150"></p>
+        <!--range 디폴트는 min=0 max=100-->
+        <p><input type="file" name="upfile" multiple></p>
+        <!--디폴트로는 파일 하나만 선택가능/ multiple 속성으로 여러개선택가능-->
+        <input type="submit" value="전송">
+    </form>
+    <hr>
+    <form>
+        <h3>다양한 입력 양식 2</h3>
+        <p>이메일 : <input type="email" name="em"></p>
+        <p>사이트 : <input type="url" name="url"></p>
+        <p>전화번호 : <input type="tel" name="tel"
+            pattern="\d{2,3}-\d{3,4}-\d{4}"></p>
+        <input type="submit" value="전송">
+    </form>
+</body>
+</html>

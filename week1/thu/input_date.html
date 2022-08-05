@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>날짜 입력</title>
+</head>
+
+<body>
+    <form>
+        <h2>날짜와 시간 입력 형식</h2>
+        <p>생일입력 : <input type="date" name="birth"></p>
+        <p>연월입력 : <input type="month" name="bmon"></p>
+        <p>연주입력 : <input type="week" name="bweek"></p>
+        <p>시간입력 : <input type="time" name="btime"></p>
+        <!--ex) 17%3A29 : 17시29분 (%3A는 한글관련 코드임)
+        오전 오후 선택할 수 있을때는 12시간이지만 보낼때는 24시간으로 보냄-->
+        <p>날짜시간 : <input type="datetime-local" name="dt"></p>
+        <p><input type="submit" value="전송"></p>
+    </form>
+</body>
+
+</html>
