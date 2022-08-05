@@ -5,10 +5,41 @@
     <meta charset="UTF-8">
     <title>회원가입</title>
 </head>
+<script>
+    function check(){
+        var form = document.join;
+        if(form.uid.value=="")
+        {
+            alert('아이디를 입력해주세요');
+            form.uid.focus();
+            return;
+        }
+        else if(form.pw.value==""){
+            alert('비밀번호를 입력해주세요');
+            form.pw.focus();
+            return;
+        }
+        else if(form.uname.value==""){
+            alert('이름을 입력해주세요');
+            form.uname.focus();
+            return;
+        }
+        else if(form.bd.value==""){
+            alert('생년월일을 입력해주세요');
+            form.bd.focus();
+            return;
+        }
+        else{
+            alert('회원가입이 완료되었습니다');
+            form.submit();
+            location.href = "login.html";
+        }
+    }
+</script>
 
 <body>
     <h3>회원가입해주세요</h3>
-    <form action="login.html" method="post">
+    <form name="join" action="login.html" method="post">
         <table>
             <tr>
                 <td>아이디</td>
@@ -24,11 +55,11 @@
             </tr>
             <tr>
                 <td>생년월일</td>
-                <td><input type="num" id="bd" placeholder="mmdd 로 입력하세요"></td>
+                <td><input type="date" id="bd" placeholder="mmdd 로 입력하세요"></td>
             </tr>
         </table>
         
-        <input type="submit" value="회원가입완료">
+        <input type="button" value="회원가입완료" onclick="check()">
     </form>
 </body>
 
