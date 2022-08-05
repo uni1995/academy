@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+p3{
+    color : blueviolet;
+    background-color: yellowgreen;
+}
+department{
+    border:5px dotted violet;
+    display: block;
+}
+team{
+    color:black;
+    display: block;
+    width: 100px;
+    height: 200px;
+}
+
+p3, department {
+    background-color: coral;
+}

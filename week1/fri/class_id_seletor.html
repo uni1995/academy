@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>class, id 선택자</title>
+    <style>
+        .c1{
+            color:blue;
+            background-color: yellow;
+        }
+        .c2{
+            color: rebeccapurple;
+        }
+        /* type 선택자와 class 선택자의 조합*/
+        h1.c1 {
+            color:aquamarine;
+        }
+        p.c1 {
+            color: gray;
+        }
+
+        /* id 선택자 */
+        #id1 {
+            background-color: chartreuse;
+        }
+        #id2 {
+            background-color: gold;
+        }
+        /* type 선택자와 id 선택자의 조합 */
+        h1#id2{
+            color: white;
+        }
+        /*   */
+        .c3 {
+            border-bottom: 2px dashed red;
+        }
+        .c4 {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>클래스 선택자</h1>
+    <h1 class = "c1">class selector 1</h1>
+    <h2 class = "c1">class selector 2</h2>
+    <h3 class = "c1">class selector 3</h3>
+    <p class = "c1">class selector 4</p>
+    <h3 class = "c3">class selector 5</h3>
+    <p class = "c2">class selector 6</p>
+    <h1 class = "c2">class selector 7</h1>
+    <hr>
+    <h1>아이디 선택자</h1>
+    <h1 id = "id1">id selector 1</h1>
+    <h2 id = "id1">id selector 2</h2>
+    <h3 id = "id1">id selector 3</h3>
+    <p id = "id1" class = "c2">id selector 4</p>
+    <h3 id = "id2">id selector 5</h3>
+    <p id = "id2">id selector 6</p>
+    <h1 id = "id2">id selector 7</h1>
+    <!--id는 고유값으로 사용하는 것을 권장
+    html css는 처리하는데 문제가 없지만 js에서는 오류남
+    여러개를 사용하고 싶다면 class를 활용하자-->
+    <hr>
+    <h3 class = "c3 c4 c2">다중 클래스 지정</h3>
+    <p class = "c3">class 속성에 여러 클래스값을 지정하여</p>
+    <p class = "c4">복합적인 스타일을 설정할수 있다</p>
+</body>
+</html>
