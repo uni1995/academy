@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>조건 연산자</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var dhAge = 34;
+    var jbAge = 28;
+    var result;
+
+    result = (dhAge<jbAge) ? 'O' : 'X';
+    console.log("result : "+result);
+    console.log("result타입 : "+typeof(result));
+
+    result =(dhAge>jbAge) ? 0 : 1;
+    console.log("result : "+result);
+    console.log("result타입 : "+typeof(result));
+
+    var num=10;
+    var resultEven;
+
+    //Q. 조건연산자를 사용해서 num이 짝수인 경우 true
+    //홀수인 경우 false 출력하는 조건연산자 작성
+    //hint ) 짝수는 2로 나누면 나머지가 0
+    
+    resultEven = (num % 2 == 0) ? true : false;
+    console.log("resultEven : " + resultEven);
+    console.log("resultEven타입 : " + typeof(resultEven));
+
+    // var na = num % 2;
+    // resultEven = (na == 0) ? true : false;
+</script>
+</html>
