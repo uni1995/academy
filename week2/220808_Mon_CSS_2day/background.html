@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>배경 처리</title>
+    <!-- <style>
+        body {
+            background-image: url("img/circle.png");
+            background-color: aquamarine;
+            background-repeat: repeat-x;
+            /* background-size: 800px; */
+            /* background-size : cover; 는 화면 사이즈에 맞춤 */
+        }
+    </style> -->
+    <style>
+        body {
+            background-image: url("img/circle.png");
+            /* background-repeat: repeat-x; */
+            height: 1500px;
+            background-attachment: fixed;
+        }
+        div#d1 {
+            margin: 20px;
+            height: 500px;
+            background-image: url("../../week1/mon/jerry.gif");
+            background-repeat: no-repeat;
+            color : white;
+            background-size: 300px;
+            border: 1px solid black;
+            background-position: center;
+        }
+        div#d2 {
+            width: 500px;
+            height: 400px;
+            border: 1px solid red;
+            background: url("../../week1/mon/dessert.jpg") 
+                        no-repeat 
+                        top right;
+            background-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "d1">여기에 이미지가 출력됩니다</div>
+    <div id = "d2">두번째 공간</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>최대 최소 너비</title>
+    <style>
+        #d1 {
+            background-color: skyblue;
+            height: 200px;
+            width: 1000px;
+            margin: auto;
+        }
+        #d2 {
+            background-color: green;
+            height: 200px;
+            max-width: 1000px;
+            margin: auto;
+            /* 축소는 마음대로 되지만 확대는 1000px이상으로 늘어나지 않음 */
+        }
+        #d3 {
+            border: 1px solid red;
+            height: 200px;
+            min-width: 500px;
+            margin: auto;
+            /* 가로로 100% 사용하지만 500px이하로는 축소되지 않음 */
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <br>
+    <div id = "d2">max-width 설정</div>
+    <div id = "d3">min-width 설정</div>
+</body>
+</html>
