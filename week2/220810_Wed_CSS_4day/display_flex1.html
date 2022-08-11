@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex 1</title>
+    <style>
+        .fcont {
+            margin: 10px;
+            padding: 15px;
+            border-radius: 15px;
+            /* width: 300px; */
+            height: 400px;
+            background-color: skyblue;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* flex 적용하면 컨텐츠 내용에 따라 사이즈 맞춰서 가로로 배열됨
+             flex-direction: row (기본)
+             -reverse는 거꾸로 배치;*/
+            justify-content: flex-start;
+            align-content: space-evenly;
+            flex-direction: column;
+        }
+        
+        .fi {
+            margin: 10px;
+            padding: 20px;
+            color: white;
+            background-color: midnightblue;
+            border-radius: 10px;
+            flex-basis: 100px;
+        }
+
+        .fcont2 {
+            margin: 10px;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: skyblue;
+            display: flex;
+            height: 150px;
+            align-items: baseline;
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
+        .fi2{
+            margin: 10px;
+            padding: 20px;
+            color: white;
+            background-color: midnightblue;
+            border-radius: 10px;
+            flex-basis: 200px;
+        }
+        #a {
+            font-size: 30px;
+        }
+        #b {
+            font-size: 10px;
+        }
+        #c {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fcont">
+        <div class="fi">1</div>
+        <div class="fi">2</div>
+        <div class="fi">3</div>
+        <div class="fi">4</div>
+        <div class="fi">5</div>
+    </div>
+    <hr>
+    <div class="fcont2">
+        <div class="fi2" id="a">AAA</div>
+        <div class="fi2" id="b">BBB</div>
+        <div class="fi2" id="c">CCC</div>
+    </div>
+</body>
+</html>

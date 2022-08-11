@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display 예</title>
+    <style>
+        a.a1 {
+            display: block;
+        }
+        li {
+            display: inline;
+        }
+        span {
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+            /* 인라인이라서 넓이 높이 적용이 안됨 */
+        }
+        span.a {
+            display: inline;
+            /* 변화x */
+        }
+        span.b {
+            display: inline-block;
+            /* 크기는 적용 / 줄은 안바뀜 */
+        }
+        span.c {
+            display: block;
+            /* 블럭요소로 돼서 크기적용, 줄바뀜 */
+        }
+        #container div {
+            background-color: yellow;
+            width: 200px;
+            height: 100px;
+            border: 1px dashed;
+        }
+        .b1 {
+            display: none;
+        }
+        .b2 {
+            visibility: hidden;
+        }
+        #d1:hover .b1 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>블록 형식으로 보이게 하기</h2> 
+    <a class="a1" href="#">링크1</a>   
+    <a class="a1" href="#">링크1</a>   
+    <a class="a1" href="#">링크1</a>   
+    <hr>
+    <h2>인라인 형식으로 보이게 하기</h2>
+    <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+    </ul>
+    <hr>
+    <h3>lnline vs inline-block vs block</h3>
+    <h4>inline</h4>
+    <div>
+        Lorem 
+        <span class="a">ipsum</span> 
+        <span class="a">dolor</span> 
+        sit amet, 
+        consectetur adipiscing elit. 
+    </div>
+    <h4>inline-block</h4>
+    <div>
+        Lorem 
+        <span class="b">ipsum</span> 
+        <span class="b">dolor</span> 
+        sit amet, 
+        consectetur adipiscing elit. 
+    </div>
+    <h4>block</h4>
+    <div>
+        Lorem 
+        <span class="c">ipsum</span> 
+        <span class="c">dolor</span> 
+        sit amet, 
+        consectetur adipiscing elit. 
+    </div>
+    <hr>
+    <div id="container">
+        <h3>display:none</h3>
+        <div class="b1">보이나요?</div>
+        <!-- 공간이 없음 -->
+        <div id="d1">이건 더미</div>
+        <h2>visivlity:hidden</h2>
+        <div class="b2">보이나요?</div>
+        <!-- 공간 남아있음 -->
+        <div id="d2">이건 더미</div>
+    </div>
+</body>
+</html>
