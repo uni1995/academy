@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>의사 클래스 선택자</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        a:link {
+            color: green;
+        }
+        a:visited {
+            color: gray;
+        }
+        a:hover {
+            color: red;
+            background-color: yellow;
+            border: 2px dashed red;
+        }
+        /* 가장 많이 쓰는 속성옵션 a:hover */
+        a:active {
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+        }
+        div {
+            width: 300px;
+            background-color: darkgreen;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        #p1 {
+            display: none;
+            /* 요소를 화면에서 제거 */
+            background-color: chartreuse;
+            padding: 20px;
+            color: black;
+        }
+        div:hover {
+            background-color: midnightblue;
+        }
+        div:hover #p1 {
+            display: block;
+        }
+        /* div에 hover 되었을 때 p의 속성을 변경할 수 있게 함 */
+        /* 아코디언메뉴 만들 때 응용됨 */
+        input:focus {
+            background-color: black;
+            color: white;
+        }
+        input:disabled {
+            background-color: black;
+            color: antiquewhite;
+        }
+        input:checked .bmw{
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://daum.net">다음카카오</a><br>
+    <a href="http://icia.co.kr">인천일보아카데미</a>
+    <hr>
+    <div id="d1">여기에 마우스를 올려보세요
+        <p id="p1">보셨나요?보셨나요?보셨나요?</p>
+    </div>
+    <hr>
+    <p>아래 입력창은 포커스를 가지면 변합니다</p>
+    <input type="text" name="in1"><br>
+    <input type="text" name="in2"><br>
+    <input type="text" name="in3"><br>
+    <hr>
+    <p>아래 입력창은 활성화 여부 및 체크상태에 따라 변합니다</p>
+    <input type="text" name="in4"><br>
+    <input type="text" name="in5" disabled value="비활성화상태"><br></body>
+    <input type="checkbox" name="ck" value="1">대중교통<br>
+    <input type="checkbox" name="ck" value="2">자가용<br>
+
+</html>
