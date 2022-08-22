@@ -16,7 +16,7 @@
             display: block;
             margin: auto;
             margin-top: 50px;
-            margin-bottom: 50pxs;
+            margin-bottom: 50px;
             box-sizing: border-box;
             width: 200px;
         }
@@ -70,7 +70,52 @@
             width: 100%;
             border: 2px solid;
         }
-
+        .tel_button {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            font-size: 12px;
+            line-height: 50px;
+            font-size: large;
+            box-sizing: border-box;
+            line-height: 50px;
+            margin-bottom: 7px;
+        }
+        .tel {
+            display: flex;
+            width: 100%;
+            height: 50px;
+            margin-bottom: -15px;
+            font-size: 12px;
+            line-height: 50px;
+            font-size: large;
+            box-sizing: border-box;
+            line-height: 50px;
+        }
+        .user_tel {
+            width: 100%;
+            margin-right: 10px;
+        }
+        .authNo{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            box-sizing: border-box;
+            margin-bottom: 7px;
+        }
+        .auth_trans{
+            background-color: lightgreen;
+            text-align: center;
+        }
+        .sign_up{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            font-size: large;
+            box-sizing: border-box;
+            background-color: lightgreen;
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -143,16 +188,18 @@
             </div>
             <div>
                 <h4>휴대전화</h4>
-                <select name="tel">
+                <select class="tel" name="tel">
                     <option value="233">가나 +233</option>
                     <option value="82" selected>대한민국 +82</option>
                 </select><br>
-                <input type="tel" class="" name="user_tel" placeholder="전화번호 입력">
-                <input type="button" name="auth_trans" value="인증번호 전송"><br>
-                <input type="text" name="authNo" placeholder="인증번호 입력" disabled>
+                <div class="tel_button">
+                <input type="tel" class="user_tel" name="user_tel" placeholder="전화번호 입력">
+                <input type="button" class="auth_trans" name="auth_trans" value="인증번호 전송">
+                </div>
+                <input class="authNo" type="text" name="authNo" placeholder="인증번호 입력" disabled>
             </div>
             <div>
-                <input type="button" value="가입하기">
+                <input type="button" class="sign_up" value="가입하기">
             </div>
         </form>
     </div>
