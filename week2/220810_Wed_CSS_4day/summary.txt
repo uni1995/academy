@@ -88,6 +88,7 @@ display : flex
                     (컨테이너 요소의 위쪽에 배치됨)
 
     6) align-content : 내부 요소의 수직 간격을 조정하는 속성
+                    내부 요소가 2줄 이상으로 배치되었을 경우 처리됨
         stretch, justify-content의 6개 속성값
 
     flex item 관련 속성
