@@ -41,7 +41,30 @@
 
     <section>
         <div id="s_box1">
-            <div id="imgs">이미지슬라이더</div>
+            <div class="image_slider">
+                <input type="radio" name="pos" id="pos1" checked>
+                <input type="radio" name="pos" id="pos2">
+                <input type="radio" name="pos" id="pos3">
+                <input type="radio" name="pos" id="pos4">
+                <!-- 같은 이름이 돼야 하나만 가능 -->
+                <!-- 화면에 들어갈 개수 -->
+                <ul>
+                    <li><img src="../../../media_reference/image/animal.jpg"></li>
+                    <li><img src="../../../media_reference/image/dessert.jpg"></li>
+                    <li><img src="../../../media_reference/image/seol.jpg"></li>
+                    <li><img src="../../../media_reference/image/jerry.gif"></li>
+                    <!-- 화면에 들어갈 내용 -->
+                </ul>
+                <p class="pos">
+                    <label for="pos1"></label>
+                    <!-- 이 레이블로 id=pos1을 선택할 수 있게 됨 -->
+                    <label for="pos2"></label>
+                    <label for="pos3"></label>
+                    <label for="pos4"></label>
+                    <!-- 라디오 버튼은 모양을 바꿀 수 없어서 레이블로 모양을 만듦 -->
+                    <!-- 라디오 버튼을 숨겨야함 -->
+                </p>
+            </div>
             <div id="loginb">로그인박스</div>
         </div>
         <div id="s_box2">
