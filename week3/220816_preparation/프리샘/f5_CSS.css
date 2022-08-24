@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+header, section, footer{
+    width: 960px;
+    border: 1px solid red;
+}
+header{
+    height: 105px;
+    margin-bottom: 10px;
+}
+#h_top{
+    background-color: darkgray;
+    height: 35px;
+}
+.h_left{
+    background-color: black;
+    color: white;
+    display: inline;  
+    height: 100%;  
+}
+.t_nav{
+    display: inline;
+    float: right;
+}
+.t_nav>ul>li{
+    display: inline;
+    margin: 10px;
+}
+#h_bottom{
+    height: 70px;
+    border: 1px solid black;
+}
+#h_bottom>h1{
+    display: inline;
+
+}
+
+.m_nav>ul>li{
+    display: inline;
+    margin: 0 10px;
+    padding: 0;
+    float: right;
+}
+
+#s_box1{
+    display: flex;
+}
+#s_box1 #imgs {
+    height: 355px;
+    margin-bottom: 10px;
+    width: 650px;
+    background-color: aquamarine;
+}
+#s_box1 #loginb {
+    height: 355px;
+    margin-bottom: 10px;
+    width: 650px;
+    background-color: orange;
+}
+#s_box2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#s_box2 div {
+    width: 310px;
+    height: 160px;
+    background-color: orange;
+}
+#s_box3 {
+    height: 125px;
+    border: 1px solid;
+    margin-bottom: 10px;
+}
+#s_box4 {
+    height: 65px;
+    border: 1px solid;
+    margin-bottom: 10px;
+}
+#s_box5 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#s_box5 div {
+    width: 475px;
+    height: 240px;
+    background-color: beige;
+    border: 1px solid;
+}
+#s_box6 {
+    display: flex;
+    justify-content: space-between;
+}
+#s_box6 div {
+    width: 232.5px;
+    height: 155px;
+    background-color: beige;
+    border: 1px solid;
+}
+#s_box6>div>ul>li{
+    list-style: none;
+    border: 1px solid;
+    height: 72.5px;
+}
+#f_top {
+    background-color: gray;
+    display: flex;
+    height: 60px;
+    margin-top: 60px;
+}
+.f_nav>ul>li {
+    display: inline;
+    margin: 10px;
+}
+#f_top>.f_site {
+    float: right;
+}
+#f_bottom {
+    height: 145px;
+    display: flex;
+    padding-top: 30px;
+}
+#f_bottom h1 {
+    display: inline;
+}
+#f_bottom address, p {
+    display: inline;
+}
+

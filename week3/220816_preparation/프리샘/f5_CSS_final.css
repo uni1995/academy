@@ -1,0 +1,153 @@
+@charset "UFT-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #dfe8e8;
+}
+header, section, footer{
+margin: auto;
+width: 960px;
+}
+#h_top {
+height: 35px;
+background-color: #1f273a;
+}
+.h_left {
+float: left;
+color: #dfe8e8;
+line-height: 35px;
+}
+.t_nav {
+float: right;
+color: #dfe8e8;
+}
+.t_nav>ul>li {
+float: left;
+list-style: none;
+margin: 0px 20px;
+line-height: 35px;
+}
+
+#h_bottom {
+height: 70px;
+}
+#h_bottom>h1{
+line-height: 70px;
+float: left;
+color: #1f273a;
+}
+.m_nav{
+float: right;
+margin-right: 60px;
+line-height: 70px;
+}
+.m_nav>ul>li {
+float: left;
+list-style: none;
+margin: 0px 30px;
+}
+
+#s_box1{
+display: flex;
+margin-bottom: 10px;
+}
+#s_box1 #imgs {
+height: 355px;
+width: 650px;
+background-color: #bdc8cd;
+}
+#s_box1 #loginb {
+height: 355px;
+
+width: 310px;
+background-color: #9bb6b9;
+}
+#s_box2{
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+#s_box2 div {
+width: 310px;
+height: 160px;
+background-color: #4c616d;
+}
+#s_box3 {
+height: 125px;
+border: 1px solid;
+margin-bottom: 10px;
+}
+#s_box4 {
+height: 65px;
+border: 1px solid;
+margin-bottom: 10px;
+}
+#s_box5 {
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+#s_box5 div {
+width: 475px;
+height: 240px;
+background-color: #9bb6b9;
+border: 1px solid;
+}
+#s_box6 {
+display: flex;
+justify-content: space-between;
+}
+#s_box6>.box6 {
+width: 232.5px;
+height: 155px;
+background-color: #9bb6b9;
+border: 1px solid;
+margin-bottom: 60px;
+margin-right: 10px;
+}
+#s_box6>div>ul {
+padding: 0;
+margin: 0;
+}
+#s_box6>div>ul>li{
+list-style: none;
+border: 1px solid;
+width: 232.5px;
+height: 72.5px;
+margin-bottom: 10px;
+}
+
+#f_top {
+height: 60px;
+background-color: #bdc8cd;
+}
+.f_nav {
+float: left;
+}
+.f_nav>ul>li {
+float: left;
+list-style: none;
+margin: 0px 10px;
+line-height: 60px;
+}
+.f_site {
+float: right;
+line-height: 60px;
+margin-right: 50px;
+}
+
+#f_bottom {
+height: 145px;
+background-color: #1f273a;
+color: #dfe8e8;
+padding: 30px;
+}
+#f_bottom_wrap>h1{
+float: left;
+margin-right: 80px;
+}
+
