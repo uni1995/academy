@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: auto;
+    margin: 0 auto;
+    min-height: 100%;
+    padding-bottom: 300px;
+    margin-top: 50px;
+}
+#fi1 {
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    box-sizing: border-box;
+ }
+ #fi2 {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+ }
+
+.logbt {
+    width: 70px;
+}
+
+/*  */
+.login{
+    text-align: center;
+    border: 1px solid black;
+}
+.mp {
+    width: 70px;
+    float: left;
+    margin-left: 10px;
+}
+
+#mpdiv{
+    box-sizing: border-box;
+    float: left;
+}
+#mph1 {
+    text-align: center;
+}
+#mph2 {
+    width: 600px;
+    height: 600px;
+    background-color: #FCF6F5;
+    box-sizing: border-box;
+}
+#logoim{
+    float: left;
+}

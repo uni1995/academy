@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raki">
+    <meta name="date" content="220825">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link type="text/css" rel="stylesheet" href="css/header.css">
+    <link type="text/css" rel="stylesheet" href="css/footer.css">
+    <script src="js/header.js"></script>
+    <title>Veganers</title>
+    <!-- style -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid; */
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        section {
+            width: 900px;
+            margin: 30px auto;
+
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        section>div {
+            /* border: 1px solid; */
+            box-sizing: border-box;
+        }
+
+        .write {
+            padding: 20px;
+            border: 1px solid;
+        }
+
+        .write_head {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            height: 40px;
+        }
+
+        .head_tag {
+            width: 19%;
+        }
+
+        #title {
+            width: 80%;
+        }
+
+        .hash {
+            border: 1px solid;
+            padding: 10px;
+            padding-left: 0;
+        }
+
+        .hash>label {
+            margin-left: 10px;
+        }
+
+        #write_cont {
+            margin: 20px 0;
+            width: 100%;
+            height: 300px;
+            resize: none;
+        }
+
+        .save_btn {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #write_save {
+            width: 20%;
+            height: 40px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<!-- body -->
+
+<body>
+    <header>
+        <div id="h_top">
+            <img src="images/veganers.png" id="logo" onclick="linkTo('main.html')">
+            <nav class="my">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="signup.html">회원가입</a></li>
+                    <li><a href="mypage.html">마이페이지</a></li>
+                    <li><a href="service_center_1.html">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="h_bottom">
+            <div id="h_b_w">
+                <div class="category">
+                    <div id="dd">
+                        <ul>
+                            <li onclick="linkTo('vegan_type.html')">비건 유형</a></li>
+                            <li class="dd_btn">음식
+                                <ul class="dd_content">
+                                    <li>식당</li>
+                                    <li>카페 및 디저트</li>
+                                    <li>1</li>
+                                </ul>
+                            </li>
+
+                            <li class="dd_btn">화장품
+                                <ul class="dd_content">
+                                    <li>1</li>
+                                    <li>1</li>
+                                    <li>1</li>
+                                </ul>
+                            </li>
+                            <li class="dd_btn">생활
+                                <ul class="dd_content">
+                                    <li>1</li>
+                                    <li>1</li>
+                                    <li>1</li>
+                                </ul>
+                            </li>
+                            <li onclick="linkTo('board.html')">커뮤니티</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sear">
+                    <input id="search" placeholder="검색어를 입력해주세요">
+                    <img class="loupe" src="images/loupe.png" onclick="linkTo('search_result_1.html')">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="write">
+            <div class="write_head">
+                <select class="head_tag">
+                    <option selected>말머리 태그</option>
+                    <option value="restaurant">식당</option>
+                    <option value="cafe_dessert">카페 및 디저트</option>
+                    <option value="recipy">레시피</option>
+                    <option value="cosmetic">화장품</option>
+                    <option>..</option>
+                    <option>..</option>
+                    <option>..</option>
+                </select>
+                <input type="text" id="title" placeholder="제목을 입력하세요">
+            </div>
+            <div class="hash">
+                <label><input type="checkbox" name="hash_tag" value="flexi">플렉시테리언</label>
+                <label><input type="checkbox" name="hash_tag" value="polo_pesco">폴로-페스코</label>
+                <label><input type="checkbox" name="hash_tag" value="">등등 비건타입</label><br>
+                <label><input type="checkbox" name="hash_tag" value="incheon">인천</label>
+                <label><input type="checkbox" name="hash_tag" value="seoul">서울</label>
+                <label><input type="checkbox" name="hash_tag" value="">등등 각종 지역</label><br>
+                <label><input type="checkbox" name="hash_tag" value="food">음식</label>
+                <label><input type="checkbox" name="hash_tag" value="f_r">맛집</label>
+                <label><input type="checkbox" name="hash_tag" value="">등등 특징</label>
+            </div>
+            <div>
+                <input type="textarea" id="write_cont">
+            </div>
+            <div class="save_btn">
+                <button id="write_save">작성</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="f_bottom">
+            <div id="f_top"></div>
+            <br>
+            <div id="f_bottom_wrap">
+                <h1 id="logoim"><img src="images/veganers.png" width="200px"></h1>
+                <nav class="f_nav">
+                    <ul style="list-style: none;">
+                        <h2><b>About Veganers</b></h2>
+                        <li>Veganers' Members : 최아람/박윤희/천명호/정지인</li>
+                        <li>Email : zarathustraaa@icloud.com</li>
+                    </ul>
+                </nav>
+            </div>
+            <br>
+            <br>
+            <address>Veganers.com</address>
+            <p>자유롭되 궁극적인 비건 생활을 지향합니다.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

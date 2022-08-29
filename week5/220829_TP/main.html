@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raki">
+    <meta name="date" content="220825">
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/header.css" />
+    <link type="text/css" rel="stylesheet" href="css/footer.css" />
+    <script src="js/header.js"></script>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>Veganers</title>
+</head>
+
+<!-- body -->
+
+<body>
+    <header>
+        <div id="h_top">
+            <img src="images/veganers.png" id="logo" onclick="linkTo('main.html')">
+            <nav class="my">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="signup.html">회원가입</a></li>
+                    <li><a href="mypage.html">마이페이지</a></li>
+                    <li><a href="service_center_1.html">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="h_bottom">
+            <div id="h_b_w">
+                <div class="category">
+                    <div id="dd">
+                        <ul>
+                            <li onclick="linkTo('vegan_type.html')">비건 유형</a></li>
+                            <li class="dd_btn">음식
+                                <ul class="dd_content">
+                                    <li>식당</li>
+                                    <li>카페 및 디저트</li>
+                                    <li>1</li>
+                                </ul>
+                            </li>
+
+                            <li class="dd_btn">화장품
+                                <ul class="dd_content">
+                                    <li>1</li>
+                                    <li>1</li>
+                                    <li>1</li>
+                                </ul>
+                            </li>
+                            <li class="dd_btn">생활
+                                <ul class="dd_content">
+                                    <li>1</li>
+                                    <li>1</li>
+                                    <li>1</li>
+                                </ul>
+                            </li>
+                            <li onclick="linkTo('board.html')">커뮤니티</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sear">
+                    <input id="search" placeholder="검색어를 입력해주세요">
+                    <img class="loupe" src="images/loupe.png" onclick="linkTo('search_result_1.html')">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="image_slider">
+            <input type="radio" name="pos" id="pos1" checked>
+            <input type="radio" name="pos" id="pos2">
+            <input type="radio" name="pos" id="pos3">
+            <input type="radio" name="pos" id="pos4">
+            <!-- 같은 이름이 돼야 하나만 가능 -->
+            <!-- 화면에 들어갈 개수 -->
+            <ul>
+                <li><img src="images/veban.jpg"></li>
+                <li><img src="images/vegan1.jfif"></li>
+                <li><img src="images/vegan2.png"></li>
+                <li><img src="images/vegan3.jpg"></li>
+                <!-- 화면에 들어갈 내용 -->
+            </ul>
+            <p class="pos">
+                <label for="pos1"></label>
+                <!-- 이 레이블로 id=pos1을 선택할 수 있게 됨 -->
+                <label for="pos2"></label>
+                <label for="pos3"></label>
+                <label for="pos4"></label>
+                <!-- 라디오 버튼은 모양을 바꿀 수 없어서 레이블로 모양을 만듦 -->
+                <!-- 라디오 버튼을 숨겨야함 -->
+            </p>
+        </div>
+        <div class="new_content">
+            <h2>최신글</h2>
+            <div class="inform">
+                <table id="content">
+                    <tr>
+                        <td>번호</td>
+                        <td>카테고리</td>
+                        <td>글 제목</td>
+                        <td>작성자</td>
+                        <td>작성 시간</td>
+                    </tr>
+                    <!-- 공지사항 -->
+                    <tr onclick="location.href='board_detail.html'">
+                        <td>*</td>
+                        <td>공지사항</td>
+                        <td>8시30분까지 입실해주세요</td>
+                        <td>관리자</td>
+                        <td>xx/xx/xx xx:xx</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>공지사항</td>
+                        <td>퇴실시 퇴실버튼을 눌러주세요</td>
+                        <td>관리자</td>
+                        <td>xx/xx/xx xx:xx</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>화장품</td>
+                        <td>오늘 점심은 떡볶이를 먹었어요</td>
+                        <td>닉네임</td>
+                        <td>xx/xx/xx xx:xx</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>식당</td>
+                        <td>xx식당 좋아요</td>
+                        <td>닉네임</td>
+                        <td>xx/xx/xx xx:xx</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>레시피</td>
+                        <td>맛있게 먹은 샌드위치 레시피 공유합니다</td>
+                        <td>닉네임</td>
+                        <td>xx/xx/xx xx:xx</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>카페 및 디저트</td>
+                        <td>여기 카페 별로에요</td>
+                        <td>닉네임</td>
+                        <td>xx/xx/xx xx:xx</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>식품 구매처</td>
+                        <td>싱싱한 야채가 많네요</td>
+                        <td>닉네임</td>
+                        <td>xx/xx/xx xx:xx</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="f_bottom">
+            <div id="f_top"></div>
+            <br>
+            <div id="f_bottom_wrap">
+                <h1 id="logoim"><img src="images/veganers.png" width="200px"></h1>
+                <nav class="f_nav">
+                    <ul style="list-style: none;">
+                        <h2><b>About Veganers</b></h2>
+                        <li>Veganers' Members : 최아람/박윤희/천명호/정지인</li>
+                        <li>Email : zarathustraaa@icloud.com</li>
+                    </ul>
+                </nav>
+            </div>
+            <br>
+            <br>
+            <address>Veganers.com</address>
+            <p>자유롭되 궁극적인 비건 생활을 지향합니다.</p>
+        </div>
+    </footer>
+</body>
+
+<!-- script -->
+<script>
+    var pos1;
+    var pos2;
+    var pos3;
+    var pos4;
+    var myTime;
+    clearInterval(myTime);
+    setInterval(function slide() {
+        pos1 = document.getElementById("pos1");
+        pos2 = document.getElementById("pos2");
+        pos3 = document.getElementById("pos3");
+        pos4 = document.getElementById("pos4");
+        if (pos1.checked) {
+            pos1.checked = false;
+            pos2.checked = true;
+        }
+        else if (pos2.checked) {
+            pos2.checked = false;
+            pos3.checked = true;
+        }
+        else if (pos3.checked) {
+            pos3.checked = false;
+            pos4.checked = true;
+        }
+        else if (pos4.checked) {
+            pos4.checked = false;
+            pos1.checked = true;
+        }
+    }, 3000);
+
+</script>
+
+</script>
+
+</html>

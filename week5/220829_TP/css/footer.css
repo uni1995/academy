@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+#f_top {
+    height: 60px;
+    background-color: #FCF6F5;
+    margin-top: 50px;
+}
+
+#f_bottom {
+    /* height: 210px; */
+    background-color: #2BAE66;
+    color: #FCF6F5;
+}
+#logoim{
+    float: left;
+}

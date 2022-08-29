@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veganers</title>
+    <link type="text/css" rel="stylesheet" href="css/header.css">
+    <link type="text/css" rel="stylesheet" href="css/footer.css">
+    <script src="js/header.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid; */
+            box-sizing: border-box;
+        }
+
+        section {
+            height: 250px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /* 커뮤니티 CSS */
+        #h2 {
+            text-align: center;
+        }
+
+        #tr1 {
+            border: 1px solid black;
+            background-color: #2BAE66;
+            color: white;
+        }
+
+        table {
+            margin: auto;
+            text-align: center;
+            width: 100%;
+            border-collapse: collapse;
+
+        }
+
+        #b1 {
+            float: right;
+            width: 100px;
+        }
+
+        table {
+            text-align: center;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        a {
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--main-->
+    <header>
+        <div id="h_top">
+            <img src="images/veganers.png" id="logo" onclick="linkTo('main.html')">
+            <nav class="my">
+                <ul>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="signup.html">회원가입</a></li>
+                    <li><a href="mypage.html">마이페이지</a></li>
+                    <li><a href="service_center_1.html">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="h_bottom">
+            <div id="h_b_w">
+                <div class="category">
+                    <div id="dd">
+                        <ul>
+                            <li onclick="linkTo('vegan_type.html')">비건 유형</a></li>
+                            <li class="dd_btn">음식
+                                <ul class="dd_content">
+                                    <li>식당</li>
+                                    <li>카페 및 디저트</li>
+                                    <li>1</li>
+                                </ul>
+                            </li>
+
+                            <li class="dd_btn">화장품
+                                <ul class="dd_content">
+                                    <li>1</li>
+                                    <li>1</li>
+                                    <li>1</li>
+                                </ul>
+                            </li>
+                            <li class="dd_btn">생활
+                                <ul class="dd_content">
+                                    <li>1</li>
+                                    <li>1</li>
+                                    <li>1</li>
+                                </ul>
+                            </li>
+                            <li onclick="linkTo('board.html')">커뮤니티</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sear">
+                    <input id="search" placeholder="검색어를 입력해주세요">
+                    <img class="loupe" src="images/loupe.png" onclick="linkTo('search_result_1.html')">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 커뮤니티 -->
+    <section>
+        <h2 id="h2">커뮤니티</h2>
+        <button id="b1" onclick="linkTo('board_write.html')">글쓰기</button>
+        <div id="d5">
+        </div>
+        <div id="d6">
+            <table>
+                <tr id="tr1">
+                    <th>번호</th>
+                    <th>카테고리</th>
+                    <th>제목</th>
+                    <th>닉네임</th>
+                    <th>작성시간</th>
+                    <th>조회</th>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <th>[식당]</th>
+                    <th>글제목(댓글수)</th>
+                    <th>닉네임</th>
+                    <th>시간</th>
+                    <th>22</th>
+                </tr>
+                <td></td>
+                <tr>
+                    <th>4</th>
+                    <th>[화장품]</th>
+                    <th>글제목(댓글수)</th>
+                    <th>닉네임</th>
+                    <th>시간</th>
+                    <th>52</th>
+                </tr>
+                <td></td>
+                <tr>
+                    <th>3</th>
+                    <th>[레시피]</th>
+                    <th>글제목(댓글수)</th>
+                    <th>닉네임</th>
+                    <th>시간</th>
+                    <th>12</th>
+                </tr>
+                <td></td>
+                <tr>
+                    <th>2</th>
+                    <th>[비건식품 구매처]</th>
+                    <th>글제목(댓글수)</th>
+                    <th>닉네임</th>
+                    <th>시간</th>
+                    <th>2</th>
+                </tr>
+                <td></td>
+                <tr>
+                    <th>1</th>
+                    <th>[식당]</th>
+                    <th>글제목(댓글수)</th>
+                    <th>닉네임</th>
+                    <th>시간</th>
+                    <th>31</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <!-- 푸터 -->
+    <footer>
+        <div id="f_bottom">
+            <div id="f_top"></div>
+            <br>
+            <div id="f_bottom_wrap">
+                <h1 id="logoim"><img src="images/veganers.png" width="200px"></h1>
+                <nav class="f_nav">
+                    <ul style="list-style: none;">
+                        <h2><b>About Veganers</b></h2>
+                        <li>Veganers' Members : 최아람/박윤희/천명호/정지인</li>
+                        <li>Email : zarathustraaa@icloud.com</li>
+                    </ul>
+                </nav>
+            </div>
+            <br>
+            <br>
+            <address>Veganers.com</address>
+            <p>자유롭되 궁극적인 비건 생활을 지향합니다.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
