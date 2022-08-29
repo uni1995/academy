@@ -12,6 +12,7 @@
             padding: 10px;
             position: relative;
         }
+
         .logo {
             display: block;
             margin: auto;
@@ -20,6 +21,7 @@
             box-sizing: border-box;
             width: 200px;
         }
+
         .input_box {
             width: 100%;
             height: 50px;
@@ -32,23 +34,27 @@
             border: 2px solid;
             line-height: 50px;
         }
-        #id_sub{
+
+        #id_sub {
             position: absolute;
             right: 20px;
             color: gray;
         }
+
         .must {
             font-size: small;
             color: red;
             margin-top: 4px;
             display: none;
         }
+
         .lock {
             position: absolute;
             right: 25px;
             width: 25px;
             margin-top: -2px;
         }
+
         .hbd {
             display: flex;
             width: 100%;
@@ -61,15 +67,19 @@
             line-height: 50px;
             justify-content: space-evenly;
         }
-        .year, .mon {
-            width:100%;
+
+        .year,
+        .mon {
+            width: 100%;
             margin-right: 10px;
             border: 2px solid;
         }
+
         .day {
             width: 100%;
             border: 2px solid;
         }
+
         .tel_button {
             display: flex;
             width: 100%;
@@ -81,6 +91,7 @@
             line-height: 50px;
             margin-bottom: 7px;
         }
+
         .tel {
             display: flex;
             width: 100%;
@@ -92,28 +103,34 @@
             box-sizing: border-box;
             line-height: 50px;
         }
+
         .user_tel {
             width: 100%;
             margin-right: 10px;
         }
-        .authNo{
+
+        .authNo {
             width: 100%;
             height: 50px;
             line-height: 50px;
             box-sizing: border-box;
             margin-bottom: 7px;
         }
-        .auth_trans{
-            background-color: lightgreen;
+
+        .auth_trans {
+            background-color: #03C75A;
             text-align: center;
+            color: white;
         }
-        .sign_up{
+
+        .sign_up {
             width: 100%;
             height: 50px;
             line-height: 50px;
             font-size: large;
             box-sizing: border-box;
-            background-color: lightgreen;
+            background-color: #03C75A;
+            color: white;
             text-align: center;
         }
     </style>
@@ -152,24 +169,24 @@
             <div>
                 <h4>생년월일</h4>
                 <div class="hbd">
-                <input class="year" type="text" name="user_byear" required maxlength="4" placeholder="년 yyyy">
-                <select class="mon" name="user_bmon">
-                    <option>월</option>
-                    <option value="01">1</option>
-                    <option value="02">2</option>
-                    <option value="03">3</option>
-                    <option value="04">4</option>
-                    <option value="05">5</option>
-                    <option value="06">6</option>
-                    <option value="07">7</option>
-                    <option value="08">8</option>
-                    <option value="09">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-                <input class="day" type="text" name="user_bday" required maxlength="2" placeholder="일dd">
-            </div>
+                    <input class="year" type="text" name="user_byear" required maxlength="4" placeholder="년 yyyy">
+                    <select class="mon" name="user_bmon">
+                        <option>월</option>
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                        <option value="03">3</option>
+                        <option value="04">4</option>
+                        <option value="05">5</option>
+                        <option value="06">6</option>
+                        <option value="07">7</option>
+                        <option value="08">8</option>
+                        <option value="09">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <input class="day" type="text" name="user_bday" required maxlength="2" placeholder="일dd">
+                </div>
                 <p class="must">*필수항목입니다</p>
             </div>
             <div>
@@ -193,8 +210,8 @@
                     <option value="82" selected>대한민국 +82</option>
                 </select><br>
                 <div class="tel_button">
-                <input type="tel" class="user_tel" name="user_tel" placeholder="전화번호 입력">
-                <input type="button" class="auth_trans" name="auth_trans" value="인증번호 전송">
+                    <input type="tel" class="user_tel" name="user_tel" placeholder="전화번호 입력">
+                    <input type="button" class="auth_trans" name="auth_trans" value="인증번호 전송">
                 </div>
                 <input class="authNo" type="text" name="authNo" placeholder="인증번호 입력" disabled>
             </div>
