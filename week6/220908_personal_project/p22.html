@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raki">
+    <meta name="date" content="220908">
+    <link rel="shortcut icon" href="../../media_reference/image/catfavicon.ico">
+    <title>스케쥴러??</title>
+    <!-- style -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cal {
+            margin: auto;
+        }
+
+        .cal_head {
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+            margin: 40px auto;
+        }
+
+        .day_name {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px auto;
+            border-bottom: 1px solid;
+        }
+
+        .week {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* .week_list>.week,
+        .week_list>.lastM {
+            flex-direction: row;
+        } */
+        .week_list>.week>div {
+            width: 100%;
+            height: 100px;
+            text-align: left;
+        }
+
+        .NCD {
+            color: gray !important;
+        }
+
+        .week>div:first-child,
+        .day_name>div:first-child {
+            color: red;
+        }
+
+        .week>div:last-child,
+        .day_name>div:last-child {
+            color: blue;
+        }
+
+        .day_plan {
+            /* display: none; */
+        }
+    </style>
+</head>
+
+<!-- body -->
+
+<body>
+    <!-- 달력 전체  -->
+    <div class="cal">
+        <!-- < 년.월 > 표시 -->
+        <div class="cal_head">
+            <a id="preM">&lt;</a>
+            <!-- <표시 -->
+            <a id="curYM"></a>
+            <!-- 현재 년도, 월 -->
+            <a id="nextM">&gt;</a>
+            <!-- >표시 -->
+        </div>
+        <!-- 요일 표시줄 -->
+        <div class="day_name">
+            <div>SUN</div>
+            <div>MON</div>
+            <div>THU</div>
+            <div>WED</div>
+            <div>THU</div>
+            <div>FRI</div>
+            <div>SAT</div>
+        </div>
+        <!-- 날짜 표시 -->
+        <div class="week_list">
+
+        </div>
+    </div>
+</body>
+
+<!-- script -->
+<script>
+    const curYM = document.getElementById("curYM");
+    const monthList = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    let nowdate = new Date(); // 8. 오늘 날짜
+    let curYear = nowdate.getFullYear(); //올해 2022
+    let curMonth = nowdate.getMonth(); // 8 0부터 시작이라 9월>8로 반환
+
+    const weeklist = document.querySelector(".week_list");
+    console.log(weeklist);
+    //날짜 표시할 부분 객체
+
+    //현재 년도와 요일 출력
+    curYM.innerHTML = `${curYear}. ${curMonth + 1}`;
+
+    //이전달의 마지막 날짜와 요일
+    // console.log(`${curYear}, ${curMonth}`);
+    let preMonInfor = new Date(curYear, curMonth, 0);
+    //Date를 만들때 지정한 날짜 객체를 만들 수 있음
+    //new Date(년, 월, 일); 지정
+    //여기서 일을 0으로 할 경우 저번달의 마지막 날짜의 객체가 반환됨
+    //현재는 9월 이므로 8월31일의 객체가 반환됨
+    // console.log(preMonInfor);
+    let preMonDay = preMonInfor.getDay(); //3. 수요일 반환
+    let preMonDate = preMonInfor.getDate(); //31 마지막날짜 반환
+    let dayCnt = preMonDay;
+    let str = "";
+    let aftMonInfor = new Date(curYear, curMonth + 1, 1);
+    let aftMonDate = aftMonInfor.getDate(); //다음달 시작일 1출력
+
+    //이번달 부분 쓰기
+    //이번달 마지막 날짜 받기
+    let calender = new Date(curYear, curMonth + 1, 0);
+    let calEndDate = calender.getDate();
+    // console.log(calEndDate);
+    let x = 1; //날짜 찍는 변수
+    let lastDate = preMonDate - preMonDay;
+    for (let i = 1; x <= calEndDate; i++) {
+        str += "<div class='week'>"
+        for (let j = 0; j < 7; j++) {
+            if (j < dayCnt + 1) {
+                str += `<div class="NCD">${lastDate}</div>`;
+                lastDate++;
+            }
+            else if (x > calEndDate) {
+                str += `<div class="NCD">${aftMonDate}</div>`;
+            }
+            else {
+                str += `<div class="days">${x}
+                    <div class="day_plan">
+                        <input type="textarea"
+                        class="planning"><br>
+                        <button class="ok">확인</button>
+                        </div>
+                        </div>`;
+                x++;
+            }
+            // console.log(dayCnt);
+        }
+        str += "</div>";
+        dayCnt = -1;
+    }
+    weeklist.innerHTML = str;
+    //달력찍기 끝
+
+    const days_p = document.querySelectorAll(".days");
+    // console.log(days_p);
+    for (let i = 0; i < days_p.length; i++) {
+        days_p[i].addEventListener("click", planning);
+    }
+    function planning(e) {
+        // console.log(e.target.innerHTML);
+        // let pDivs = document.createElement("div");
+        // let inp = document.createElement("input");
+        // inp.type = "textarea";
+        // pDivs.className = "day_plan";
+        // pDivs.style.zIndex = 1;
+
+    }
+
+</script>
