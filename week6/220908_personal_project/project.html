@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raki">
+    <meta name="date" content="220908">
+    <link rel="shortcut icon" href="../../media_reference/image/catfavicon.ico">
+    <title>스케쥴러??</title>
+    <!-- style -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cal {
+            margin: auto;
+        }
+
+        .cal_head {
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+            margin: 40px auto;
+        }
+
+        .day_name {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .week_list {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<!-- body -->
+
+<body>
+    <!-- 달력 전체  -->
+    <div class="cal">
+        <!-- < 년.월 > 표시 -->
+        <div class="cal_head">
+            <a id="preM">&lt;</a>
+            <!-- <표시 -->
+            <a id="curYM"></a>
+            <!-- 현재 년도, 월 -->
+            <a id="nextM">&gt;</a>
+            <!-- >표시 -->
+        </div>
+        <!-- 요일 표시줄 -->
+        <div class="day_name">
+            <div>SUN</div>
+            <div>MON</div>
+            <div>THU</div>
+            <div>WED</div>
+            <div>THU</div>
+            <div>FRI</div>
+            <div>SAT</div>
+        </div>
+        <!-- 날짜 표시 -->
+        <div class="week_list">
+
+        </div>
+    </div>
+</body>
+
+<!-- script -->
+<script>
+    const curYM = document.getElementById("curYM");
+    const monthList = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    let nowdate = new Date(); // 8. 오늘 날짜
+    let curYear = nowdate.getFullYear(); //올해 2022
+    let curMonth = nowdate.getMonth(); // 8 0부터 시작이라 9월>8로 반환
+
+    const weeklist = document.querySelector(".week_list");
+    console.log(weeklist);
+    //날짜 표시할 부분 객체
+
+    //현재 년도와 요일 출력
+    curYM.innerHTML = `${curYear}. ${curMonth + 1}`;
+
+    //이전달의 마지막 날짜와 요일
+    // console.log(`${curYear}, ${curMonth}`);
+    let preMonInfor = new Date(curYear, curMonth, 0);
+    //Date를 만들때 지정한 날짜 객체를 만들 수 있음
+    //new Date(년, 월, 일); 지정
+    //여기서 일을 0으로 할 경우 저번달의 마지막 날짜의 객체가 반환됨
+    //현재는 9월 이므로 8월31일의 객체가 반환됨
+    console.log(preMonInfor);
+    let preMonDay = preMonInfor.getDay(); //3. 수요일 반환
+    let preMonDate = preMonInfor.getDate(); //31 마지막날짜 반환
+    let dayCnt = 0;
+    //달력만들기
+    //저번달 부분 쓰기
+    //처음에만 실행되면 됨
+    let str = "</div>";
+    weeklist.innerHTML = "<div class='week'>"
+    for (let i = preMonDate - preMonDay; i <= preMonDate; i++) {
+        // console.log(i);  //28, 29 , 30 ,31 출력됨
+        let divs = document.createElement("div"); //div 태그 추가
+        let predate = document.createTextNode(i); //날짜 TextNode 추가
+        divs.appendChild(predate);
+        weeklist.appendChild(divs);
+        dayCnt++;
+    }
+    // weeklist.innerHTML = str;
+
+    //이번달 부분 쓰기
+    //이번달 마지막 날짜 받기
+    let calender = new Date(curYear, curMonth + 1, 0);
+    let calEndDate = calender.getDate();
+    let x = 1;
+    for (let i = 1; i <= 7; i++) {
+        let weekdiv = document.createElement("div");
+        weekdiv.className = "week"
+        let weeks = document.querySelector(".week");
+        weeklist.appendChild(weekdiv);
+
+        for (let j = dayCnt; j < 7; j++) {
+            let divs = document.createElement("div"); //div 태그 추가
+            let predate = document.createTextNode(x); //날짜 TextNode 추가
+            divs.appendChild(predate);
+            // weeks.appendChild(divs);
+            dayCnt++;
+            x++;
+        }
+
+        dayCnt = 0;
+
+    } 
+</script>
+
+</html>
